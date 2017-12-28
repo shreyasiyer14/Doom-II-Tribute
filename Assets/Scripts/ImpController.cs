@@ -12,7 +12,7 @@ public class ImpController : AbstractAIBehavior {
 
 	void Start () {
 		player = Camera.main.transform;
-		anim = GetComponent<Animator> ();
+		anim = transform.GetChild(0).gameObject.GetComponent<Animator> ();
 		parameterList.Add (Direction.Forward);
 		parameterList.Add (Direction.Back);
 		parameterList.Add (Direction.Left);
@@ -24,8 +24,6 @@ public class ImpController : AbstractAIBehavior {
 	}
 
 	private void ResetAllParams () {
-		if (parameterList.Count == 0)
-			return;
 		foreach (Direction param in parameterList) {
 			if (param != spriteCode)
 				anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(param.GetType()), param)).name, false);
@@ -34,8 +32,10 @@ public class ImpController : AbstractAIBehavior {
 	}
 	
 	void Update () {
-		transform.LookAt (player);
-		spriteCode = ChangeSpriteCode (GetDotWithPlayer (player));
+		transform.GetChild(0).LookAt (player);
+		float sign = GetRotateDirection (player);
+		float dot = GetDotWithPlayer (player);
+		spriteCode = ChangeSpriteCode (dot, sign);
 
 		ResetAllParams ();
 		anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode)).name, true);
