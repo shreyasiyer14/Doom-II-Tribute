@@ -20,14 +20,17 @@ abstract public class AbstractAIBehavior : MonoBehaviour {
 		if (dotValue <= 1.0f && dotValue > 0.71f) {
 			return Direction.Back;
 		} else if (dotValue <= 0.71f && dotValue > 0.1f) {
-			if (sign == 1.0f)
+			if (sign == -1.0f)
 				return Direction.BackwardLeft;
-			else
+			else 
 				return Direction.BackwardRight;
-		} else if (dotValue <= 0.1f && dotValue >= 0.0f) {
-			return Direction.Left;
-		} else if (dotValue < 0.0f && dotValue > -0.71f) {
-			if (sign == 1.0f)
+		} else if (dotValue <= 0.1f && dotValue >= -0.1f) {
+			if (sign == -1.0f)
+				return Direction.Left;
+			else
+				return Direction.Right;
+		} else if (dotValue < -0.1f && dotValue > -0.71f) {
+			if (sign == -1.0f)
 				return Direction.ForwardLeft;
 			else
 				return Direction.ForwardRight;

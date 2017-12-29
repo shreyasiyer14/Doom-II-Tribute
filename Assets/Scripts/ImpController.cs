@@ -36,8 +36,13 @@ public class ImpController : AbstractAIBehavior {
 		float sign = GetRotateDirection (player);
 		float dot = GetDotWithPlayer (player);
 		spriteCode = ChangeSpriteCode (dot, sign);
-
 		ResetAllParams ();
-		anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode)).name, true);
+		if (spriteCode == Direction.BackwardRight || spriteCode == Direction.ForwardRight || spriteCode == Direction.Right) {
+			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
+			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode) - 1).name, true);
+		} else {
+			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
+			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode)).name, true);
+		}
 	}
 }

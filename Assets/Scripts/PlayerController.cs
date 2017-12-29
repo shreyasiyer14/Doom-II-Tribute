@@ -17,6 +17,20 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-		
+		if (Input.GetKey (KeyCode.W)) {
+			transform.Translate (transform.forward * stepSize * Time.fixedDeltaTime);
+		}
+
+		if (Input.GetKey (KeyCode.S)) {
+			transform.Translate (-transform.forward * stepSize * Time.fixedDeltaTime);
+		}
+
+		if (Input.GetKey (KeyCode.D)) {
+			transform.Translate (transform.right * stepSize * Time.fixedDeltaTime);
+		}
+
+		if (Input.GetKey (KeyCode.A)) {
+			transform.Translate (-transform.right * stepSize * Time.fixedDeltaTime);
+		}
 	}
 }
