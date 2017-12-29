@@ -20,6 +20,7 @@ abstract public class AbstractAIBehavior : MonoBehaviour {
 	}
 		
 	protected Direction ChangeSpriteCode (float dotValue, float sign, float transformAngle) {
+		Debug.Log (transformAngle);
 		if (transformAngle >= 0.0f && transformAngle < 5.0f)
 			return Direction.Back;
 		else if (transformAngle >= 5.0f && transformAngle < 30.0f) {
@@ -37,7 +38,7 @@ abstract public class AbstractAIBehavior : MonoBehaviour {
 				return Direction.ForwardLeft;
 			else
 				return Direction.ForwardRight;
-		} else if (transformAngle >= 85.0f && transformAngle <= 90.0f) {
+		} else if (transformAngle >= 85.0f) {
 			return Direction.Forward;
 		}
 
