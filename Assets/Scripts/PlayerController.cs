@@ -19,22 +19,25 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
-		transform.LookAt (testObj);
-		transform.RotateAround (testObj.position, Vector3.up, 10f * Time.fixedDeltaTime);
+		if (Input.GetKey (KeyCode.LeftArrow))
+			transform.Rotate (new Vector3(0f, -Time.fixedDeltaTime * 50f, 0f));
+		if (Input.GetKey (KeyCode.RightArrow))
+			transform.Rotate (new Vector3(0f, Time.fixedDeltaTime * 50f, 0f));
+		
 		if (Input.GetKey (KeyCode.W)) {
-			transform.Translate (transform.forward * stepSize * Time.fixedDeltaTime);
+			transform.Translate (Vector3.forward * stepSize * Time.fixedDeltaTime);
 		}
 
 		if (Input.GetKey (KeyCode.S)) {
-			transform.Translate (-transform.forward * stepSize * Time.fixedDeltaTime);
+			transform.Translate (-Vector3.forward * stepSize * Time.fixedDeltaTime);
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
-			transform.Translate (transform.right * stepSize * Time.fixedDeltaTime);
+			transform.Translate (Vector3.right * stepSize * Time.fixedDeltaTime);
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
-			transform.Translate (-transform.right * stepSize * Time.fixedDeltaTime);
+			transform.Translate (-Vector3.right * stepSize * Time.fixedDeltaTime);
 		}
 	}
 }
