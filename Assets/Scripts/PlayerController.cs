@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float verticalBob;
 	[SerializeField] private float stepSize;
 
+	public Transform testObj;
+
 	private GameObject playerCamera;
 
 	void Start () {
@@ -17,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+		transform.LookAt (testObj);
+		transform.RotateAround (testObj.position, Vector3.up, 10f * Time.fixedDeltaTime);
 		if (Input.GetKey (KeyCode.W)) {
 			transform.Translate (transform.forward * stepSize * Time.fixedDeltaTime);
 		}

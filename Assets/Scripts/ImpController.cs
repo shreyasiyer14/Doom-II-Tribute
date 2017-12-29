@@ -38,11 +38,11 @@ public class ImpController : AbstractAIBehavior {
 		spriteCode = ChangeSpriteCode (dot, sign);
 		ResetAllParams ();
 		if (spriteCode == Direction.BackwardRight || spriteCode == Direction.ForwardRight || spriteCode == Direction.Right) {
-			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
 			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode) - 1).name, true);
+			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
 		} else {
-			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
 			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode)).name, true);
+			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
 		}
 	}
 }
