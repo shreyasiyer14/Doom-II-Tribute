@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 			transform.position = new Vector3 (transform.position.x, eyeHeight + Mathf.Sin(Time.time * verticalBob), transform.position.z);
 		}
 
-		transform.position = new Vector3(transform.position.x, Mathf.Lerp (transform.position.y, eyeHeight, Time.deltaTime), transform.position.z);
+		if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+			transform.position = new Vector3(transform.position.x, Mathf.Lerp (transform.position.y, eyeHeight, 0.5f), transform.position.z);
 	}
 }
