@@ -17,8 +17,10 @@ public class ImpController : AbstractAIBehavior {
 		
 	void ResetAllParams () {
 		foreach (Direction param in parameterList) {
-			if (param != spriteCode)
-				anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(param.GetType()), param)).name, false);
+			if (param != spriteCode) {
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (param.GetType ()), param)).name, false);
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (param.GetType ()), param) + 8).name, false);
+			}
 		}
 		return;
 	}
@@ -34,11 +36,24 @@ public class ImpController : AbstractAIBehavior {
 		ResetAllParams ();
 
 		if (spriteCode == Direction.BackwardRight || spriteCode == Direction.ForwardRight || spriteCode == Direction.Right) {
-			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode) - 1).name, true);
+			if (DistanceWithPlayer (player) <= 10.0f) {
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, true);
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) - 1).name, false);
+			} else {
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) - 1).name, true);
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, false);
+			}
 			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
 		} else {
-			anim.SetBool (anim.GetParameter(Array.IndexOf(Enum.GetValues(spriteCode.GetType()), spriteCode)).name, true);
+			if (DistanceWithPlayer (player) <= 10.0f) {
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, true);
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode)).name, false);
+			} else {
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode)).name, true);
+				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, false);
+			}
 			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
 		}
+
 	}
 }

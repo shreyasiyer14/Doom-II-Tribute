@@ -47,4 +47,8 @@ abstract public class AbstractAIBehavior : MonoBehaviour {
 	protected float AngleBetweenTransforms (Transform other) {
 		return Vector3.Angle (transform.forward, other.forward);
 	}
+
+	protected float DistanceWithPlayer (Transform player) {
+		return Vector3.Distance (transform.position, player.position);
+	}
 }

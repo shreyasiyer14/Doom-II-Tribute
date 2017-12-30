@@ -8,8 +8,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float horizontalBob;
 	[SerializeField] private float verticalBob;
 	[SerializeField] private float stepSize;
-
-	public Transform testObj;
+	[SerializeField] private float turningFactor;
 
 	private GameObject playerCamera;
 
@@ -20,9 +19,9 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
 		if (Input.GetKey (KeyCode.LeftArrow))
-			transform.Rotate (new Vector3(0f, -Time.fixedDeltaTime * 100f, 0f));
+			transform.Rotate (new Vector3(0f, -Time.fixedDeltaTime * turningFactor, 0f));
 		if (Input.GetKey (KeyCode.RightArrow))
-			transform.Rotate (new Vector3(0f, Time.fixedDeltaTime * 100f, 0f));
+			transform.Rotate (new Vector3(0f, Time.fixedDeltaTime * turningFactor, 0f));
 		
 		if (Input.GetKey (KeyCode.W)) {
 			transform.Translate (Vector3.forward * stepSize * Time.fixedDeltaTime);

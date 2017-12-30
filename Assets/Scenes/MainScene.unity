@@ -590,7 +590,7 @@ MonoBehaviour:
   horizontalBob: 0
   verticalBob: 8
   stepSize: 30
-  testObj: {fileID: 1227672025}
+  turningFactor: 100
 --- !u!1 &1872105562
 GameObject:
   m_ObjectHideFlags: 0
