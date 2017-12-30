@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour {
+public class Projectile : Component {
 	[SerializeField] private float damage;
 	[SerializeField] private float speed;
 
+	private bool explodedToPlayer = false;
 	private Animator anim;
 	private Transform player;
 	private Transform sprite;
@@ -29,12 +30,13 @@ public class Projectile : MonoBehaviour {
 	void ProximityCheck () {
 		if (Vector3.Distance (player.position, transform.position) <= 10.0f) {
 			anim.SetBool (anim.GetParameter(0).name, true);
-			Destroy (gameObject, 2f);
+			explodedToPlayer = true;
+
+			GameObject playerParentObject = player.parent.gameObject;
+			DamageAuthoritySystem.send (new DoDamageEvent(gameObject, playerParentObject, playerParentObject.GetComponent<HealthComponent>()), damage);	
+
+			Destroy (gameObject, 0.5f);
 		}
 		return;
-	}
-
-	void OnDestroy () {
-		player.parent.gameObject.SendMessage ("TakeDamage", damage, SendMessageOptions.DontRequireReceiver);
 	}
 }

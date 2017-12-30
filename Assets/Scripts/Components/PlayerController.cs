@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : Component {
 	[Header("Player Physical Attributes")]
 	[SerializeField] private float eyeHeight;
 	[SerializeField] private float horizontalBob;
 	[SerializeField] private float verticalBob;
 	[SerializeField] private float stepSize;
 	[SerializeField] private float turningFactor;
-
-	[Header("Health")]
-	[SerializeField] private float hp;
 
 	private GameObject playerCamera;
 
@@ -48,13 +45,5 @@ public class PlayerController : MonoBehaviour {
 
 		if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
 			transform.position = new Vector3(transform.position.x, Mathf.Lerp (transform.position.y, eyeHeight, 0.5f), transform.position.z);
-	}
-
-	public void TakeDamage (float damage) {
-		if (hp >= damage)
-			hp -= damage;
-		else
-			hp = 0f;
-		return;
 	}
 }
