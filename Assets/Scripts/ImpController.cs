@@ -68,6 +68,6 @@ public class ImpController : AbstractAIBehavior {
 	}
 
 	private void AttackEntity () {
-		GameObject newProjectile = (GameObject) Instantiate (attackProjectile, transform.position, transform.rotation);	
+		Instantiate (attackProjectile, transform.position, transform.rotation);	
 	}
 }
