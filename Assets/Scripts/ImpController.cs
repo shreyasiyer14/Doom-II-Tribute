@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 
 public class ImpController : AbstractAIBehavior {
+	[SerializeField] private float searchRadius;
+	[SerializeField] private GameObject attackProjectile;
+
 	private Transform player;
 	private Direction spriteCode;
 	private Animator anim;
@@ -36,24 +39,33 @@ public class ImpController : AbstractAIBehavior {
 		ResetAllParams ();
 
 		if (spriteCode == Direction.BackwardRight || spriteCode == Direction.ForwardRight || spriteCode == Direction.Right) {
-			if (DistanceWithPlayer (player) <= 10.0f) {
+			if (DistanceWithPlayer (player) <= searchRadius) {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) - 1).name, false);
+				if (!IsInvoking())
+					InvokeRepeating ("AttackEntity", 0f, 1f);
 			} else {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) - 1).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, false);
+				CancelInvoke ();
 			}
 			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
 		} else {
-			if (DistanceWithPlayer (player) <= 10.0f) {
+			if (DistanceWithPlayer (player) <= searchRadius) {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode)).name, false);
+				if (!IsInvoking())
+					InvokeRepeating ("AttackEntity", 0f, 1f);
 			} else {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode)).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, false);
+				CancelInvoke ();
 			}
 			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
 		}
+	}
 
+	private void AttackEntity () {
+		GameObject newProjectile = (GameObject) Instantiate (attackProjectile, transform.position, sprite.rotation);	
 	}
 }

@@ -25,22 +25,22 @@ public class PlayerController : MonoBehaviour {
 		
 		if (Input.GetKey (KeyCode.W)) {
 			transform.Translate (Vector3.forward * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + Mathf.Sin(Time.time * verticalBob), transform.position.z);
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
 		}
 
 		if (Input.GetKey (KeyCode.S)) {
 			transform.Translate (-Vector3.forward * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + Mathf.Sin(Time.time * verticalBob), transform.position.z);
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
 			transform.Translate (Vector3.right * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + Mathf.Sin(Time.time * verticalBob), transform.position.z);
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
 		}
 
 		if (Input.GetKey (KeyCode.A)) {
 			transform.Translate (-Vector3.right * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + Mathf.Sin(Time.time * verticalBob), transform.position.z);
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
 		}
 
 		if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
