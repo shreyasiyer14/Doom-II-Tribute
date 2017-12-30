@@ -27,10 +27,9 @@ public class ImpController : AbstractAIBehavior {
 		sprite.LookAt (player);
 
 		float sign = GetRotateDirection (player);
-		float dot = GetDotWithPlayer (player);
 		float transAng = AngleBetweenTransforms (player);
 
-		spriteCode = ChangeSpriteCode (dot, sign, transAng);
+		spriteCode = ChangeSpriteCode (sign, transAng);
 
 		ResetAllParams ();
 
