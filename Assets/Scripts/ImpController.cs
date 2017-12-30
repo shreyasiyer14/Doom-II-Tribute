@@ -42,6 +42,7 @@ public class ImpController : AbstractAIBehavior {
 			if (DistanceWithPlayer (player) <= searchRadius) {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) - 1).name, false);
+				transform.rotation = sprite.rotation;
 				if (!IsInvoking())
 					InvokeRepeating ("AttackEntity", 0f, 1f);
 			} else {
@@ -49,11 +50,12 @@ public class ImpController : AbstractAIBehavior {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 7).name, false);
 				CancelInvoke ();
 			}
-			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = true;
+			sprite.GetComponent<SpriteRenderer> ().flipX = true;
 		} else {
 			if (DistanceWithPlayer (player) <= searchRadius) {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, true);
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode)).name, false);
+				transform.rotation = sprite.rotation;
 				if (!IsInvoking())
 					InvokeRepeating ("AttackEntity", 0f, 1f);
 			} else {
@@ -61,11 +63,11 @@ public class ImpController : AbstractAIBehavior {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (spriteCode.GetType ()), spriteCode) + 8).name, false);
 				CancelInvoke ();
 			}
-			transform.GetChild (0).GetComponent<SpriteRenderer> ().flipX = false;
+			sprite.GetComponent<SpriteRenderer> ().flipX = false;
 		}
 	}
 
 	private void AttackEntity () {
-		GameObject newProjectile = (GameObject) Instantiate (attackProjectile, transform.position, sprite.rotation);	
+		GameObject newProjectile = (GameObject) Instantiate (attackProjectile, transform.position, transform.rotation);	
 	}
 }
