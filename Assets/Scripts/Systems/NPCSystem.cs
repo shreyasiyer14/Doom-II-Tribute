@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCSystem : MonoBehaviour, EventSystem {
-	NPCComponent.Direction ChangeSpriteCode (float sign, float transformAngle) {
+abstract public class NPCSystem : MonoBehaviour, EventSystem {
+	protected NPCComponent.Direction ChangeSpriteCode (float sign, float transformAngle) {
 		if (transformAngle <= 180.0f && transformAngle >= 165.0f)
 			return NPCComponent.Direction.Forward;
 		else if (transformAngle > 110.0f && transformAngle < 165.0f) {
@@ -28,25 +28,25 @@ public class NPCSystem : MonoBehaviour, EventSystem {
 		return NPCComponent.Direction.Default;
 	}
 
-	float GetDotWithPlayer(GameObject entity, Transform playerCamera) {
+	protected float GetDotWithPlayer(GameObject entity, Transform playerCamera) {
 		float dot = Vector3.Dot (playerCamera.forward, entity.transform.forward)/(playerCamera.forward.magnitude * entity.transform.forward.magnitude);
 		return dot;
 	}
 
-	float AngleBetweenTransforms (GameObject entity, Transform other) {
+	protected float AngleBetweenTransforms (GameObject entity, Transform other) {
 		return Vector3.Angle (entity.transform.forward, other.forward);
 	}
 
-	float DistanceWithPlayer (GameObject entity, Transform player) {
+	protected float DistanceWithPlayer (GameObject entity, Transform player) {
 		return Vector3.Distance (entity.transform.position, player.position);
 	}
 
-	float GetRotateDirection (GameObject entity, Transform playerCamera) {
+	protected float GetRotateDirection (GameObject entity, Transform playerCamera) {
 		float dir = AngleDir(entity.transform.forward, playerCamera.position - entity.transform.position, entity.transform.up);
 		return dir;
 	}
 
-	float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up) {
+	protected float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up) {
 		Vector3 perp = Vector3.Cross(fwd, targetDir);
 		float dir = Vector3.Dot(perp, up);
 
@@ -60,12 +60,12 @@ public class NPCSystem : MonoBehaviour, EventSystem {
 	}
 
 	// Use this for initialization
-	void Start () {
+	protected virtual void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected virtual void Update () {
 
 	}
 }

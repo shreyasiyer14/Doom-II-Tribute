@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : Component {
+public class ProjectileComponent : Component {
 	[SerializeField] private float damage;
 	[SerializeField] private float speed;
 
