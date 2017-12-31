@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : Component {
+[RequireComponent(typeof(EntityComponent))]
+public class PlayerComponent : Component {
 	[Header("Player Physical Attributes")]
 	[SerializeField] private float eyeHeight;
 	[SerializeField] private float horizontalBob;
