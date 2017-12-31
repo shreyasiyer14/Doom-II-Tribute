@@ -11,7 +11,7 @@ public class ImpSystem : NPCSystem {
 	}
 	// Update is called once per frame
 	void Update () {
-		foreach (GameObject impEntity in EntityManager.instance.getObjectsOfType<ImpComponent>()) {
+		foreach (GameObject impEntity in EntityManager.getObjectsOfType<ImpComponent>()) {
 			if (impEntity.GetComponent<ImpComponent> ().sprite == null)
 				impEntity.GetComponent<ImpComponent> ().sprite = impEntity.transform.GetChild (0);
 			impEntity.GetComponent<ImpComponent> ().sprite.LookAt (player);
@@ -53,7 +53,7 @@ public class ImpSystem : NPCSystem {
 		}
 	}
 
-	private void ResetAllParams (Animator anim, NPCComponent.Direction spriteCode) {
+	private static void ResetAllParams (Animator anim, NPCComponent.Direction spriteCode) {
 		foreach (NPCComponent.Direction param in NPCComponent.parameterList) {
 			if (param != spriteCode) {
 				anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (param.GetType ()), param)).name, false);
