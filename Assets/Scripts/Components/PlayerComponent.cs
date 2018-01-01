@@ -22,10 +22,11 @@ public class PlayerComponent : Component {
 	
 	void Update () {
 		#region User-Mouse/Keyboard handling : For player/character's rotation.
-		mousePosX += Input.GetAxis("Horizontal");
-		Quaternion rotation = Quaternion.Euler(0f, mousePosX * sensitivity, 0f);
-		transform.rotation = rotation;
-
+		if (Input.GetAxis("Horizontal") != 0.0f) {
+			mousePosX += Input.GetAxis("Horizontal");
+			Quaternion rotation = Quaternion.Euler(0f, mousePosX * sensitivity, 0f);
+			transform.rotation = rotation;
+		}
 		if (Input.GetKey (KeyCode.LeftArrow))
 			transform.Rotate (new Vector3(0f, -Time.fixedDeltaTime * turningFactor, 0f));
 		if (Input.GetKey (KeyCode.RightArrow))
