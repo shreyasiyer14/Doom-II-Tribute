@@ -547,12 +547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66791be2bc9724082869ba90c880b153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityTransform: {fileID: 0}
   searchRadius: 30
   attackProjectile: {fileID: 1267923030497128, guid: 593373799f40b4f39b0b1059bada4606,
     type: 2}
-  spriteCode: 0
-  sprite: {fileID: 0}
 --- !u!114 &1227672027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,6 +662,7 @@ MonoBehaviour:
   verticalBob: 8
   stepSize: 40
   turningFactor: 70
+  sensitivity: 0.1
 --- !u!114 &1631983427
 MonoBehaviour:
   m_ObjectHideFlags: 0

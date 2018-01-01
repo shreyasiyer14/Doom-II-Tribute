@@ -14,10 +14,14 @@ public class EntityManager {
 	}
 
 	public static void Add (GameObject entity) {
+		if (entityList.Contains (entity))
+			return;
 		entityList.Add (entity);
 	}
 
 	public static void Remove (GameObject entity) {
+		if (!entityList.Contains (entity))
+			return;
 		entityList.Remove (entity);
 	}
 

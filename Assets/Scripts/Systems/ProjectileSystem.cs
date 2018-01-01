@@ -26,7 +26,7 @@ public class ProjectileSystem : MonoBehaviour, EventSystem {
 
 			if (!projectileComp.IsInvoking())
 				projectileComp.InvokeRepeating ("ProjectileTranslation", 0.05f, 0.2f);
-
+			Destroy (projectileEntity, 15f);
 			ProximityCheck (projectileEntity, anim);
 		}
 	}
@@ -36,7 +36,9 @@ public class ProjectileSystem : MonoBehaviour, EventSystem {
 			anim.SetBool (anim.GetParameter(0).name, true);
 
 			GameObject playerParentObject = player.parent.gameObject;
-			DamageAuthoritySystem.send (new DoDamageEvent(projectile, playerParentObject, playerParentObject.GetComponent<HealthComponent>()), projectile.GetComponent<ProjectileComponent>().damage);	
+			ProjectileComponent projectileComp = projectile.GetComponent<ProjectileComponent> ();
+
+			DamageAuthoritySystem.send (new DoDamageEvent(projectile, playerParentObject, playerParentObject.GetComponent<HealthComponent>()), projectileComp.damage);	
 
 			Destroy (projectile, 0.5f);
 		}
