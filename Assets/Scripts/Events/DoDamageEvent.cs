@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoDamageEvent : AbstractEvent {
+public class DoDamageEvent : AbstractFloatEvent {
 	private GameObject entity;
 	private GameObject instigator;
 	private HealthComponent instigatorHealthComp;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TakeDamageEvent : AbstractEvent {
+public class TakeDamageEvent : AbstractFloatEvent {
 
 	private GameObject entity;
 	private GameObject instigator;

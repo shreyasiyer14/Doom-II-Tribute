@@ -12,43 +12,45 @@ public class ImpSystem : NPCSystem {
 	// Update is called once per frame
 	void Update () {
 		foreach (GameObject impEntity in EntityManager.getObjectsOfType<ImpComponent>()) {
-			if (impEntity.GetComponent<ImpComponent> ().sprite == null)
-				impEntity.GetComponent<ImpComponent> ().sprite = impEntity.transform.GetChild (0);
-			impEntity.GetComponent<ImpComponent> ().sprite.LookAt (player);
+			ImpComponent impComponent = impEntity.GetComponent<ImpComponent> ();
 
-			Animator anim = impEntity.GetComponent<ImpComponent> ().sprite.GetComponent<Animator> ();
+			if (impComponent.sprite == null)
+				impComponent.sprite = impEntity.transform.GetChild (0);
+			impComponent.sprite.LookAt (player);
+
+			Animator anim = impComponent.sprite.GetComponent<Animator> ();
 			float sign = GetRotateDirection (impEntity, player);
 			float transAng = AngleBetweenTransforms (impEntity, player);
 
-			impEntity.GetComponent<ImpComponent> ().spriteCode = ChangeSpriteCode (sign, transAng);
-			ResetAllParams (anim, impEntity.GetComponent<ImpComponent> ().spriteCode);
+			impComponent.spriteCode = ChangeSpriteCode (sign, transAng);
+			ResetAllParams (anim, impComponent.spriteCode);
 
-			if (impEntity.GetComponent<ImpComponent>().spriteCode == NPCComponent.Direction.BackwardRight || impEntity.GetComponent<ImpComponent>().spriteCode == NPCComponent.Direction.ForwardRight || impEntity.GetComponent<ImpComponent>().spriteCode == NPCComponent.Direction.Right) {
-				if (DistanceWithPlayer (impEntity, player) <= impEntity.GetComponent<ImpComponent>().searchRadius) {
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) + 7).name, true);
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) - 1).name, false);
-					impEntity.transform.rotation = impEntity.GetComponent<ImpComponent>().sprite.rotation;
-					if (!impEntity.GetComponent<ImpComponent>().IsInvoking())
-						impEntity.GetComponent<ImpComponent>().InvokeRepeating ("AttackEntity", 0f, 1f);
+			if (impComponent.spriteCode == NPCComponent.Direction.BackwardRight || impComponent.spriteCode == NPCComponent.Direction.ForwardRight || impComponent.spriteCode == NPCComponent.Direction.Right) {
+				if (DistanceWithPlayer (impEntity, player) <= impComponent.searchRadius) {
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) + 7).name, true);
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) - 1).name, false);
+					impEntity.transform.rotation = impComponent.sprite.rotation;
+					if (!impComponent.IsInvoking())
+						impComponent.InvokeRepeating ("GenerateProjectile", 0f, 1f);
 				} else {
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) - 1).name, true);
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) + 7).name, false);
-					impEntity.GetComponent<ImpComponent>().CancelInvoke ();
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) - 1).name, true);
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) + 7).name, false);
+					impComponent.CancelInvoke ();
 				}
-				impEntity.GetComponent<ImpComponent>().sprite.GetComponent<SpriteRenderer> ().flipX = true;
+				impComponent.sprite.GetComponent<SpriteRenderer> ().flipX = true;
 			} else {
-				if (DistanceWithPlayer (impEntity, player) <= impEntity.GetComponent<ImpComponent>().searchRadius) {
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) + 8).name, true);
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode)).name, false);
-					impEntity.transform.rotation = impEntity.GetComponent<ImpComponent>().sprite.rotation;
-					if (!impEntity.GetComponent<ImpComponent>().IsInvoking())
-						impEntity.GetComponent<ImpComponent>().InvokeRepeating ("AttackEntity", 0f, 1f);
+				if (DistanceWithPlayer (impEntity, player) <= impComponent.searchRadius) {
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) + 8).name, true);
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode)).name, false);
+					impEntity.transform.rotation = impComponent.sprite.rotation;
+					if (!impComponent.IsInvoking())
+						impComponent.InvokeRepeating ("GenerateProjectile", 0f, 1f);
 				} else {
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode)).name, true);
-					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impEntity.GetComponent<ImpComponent>().spriteCode.GetType ()), impEntity.GetComponent<ImpComponent>().spriteCode) + 8).name, false);
-					impEntity.GetComponent<ImpComponent>().CancelInvoke ();
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode)).name, true);
+					anim.SetBool (anim.GetParameter (Array.IndexOf (Enum.GetValues (impComponent.spriteCode.GetType ()), impComponent.spriteCode) + 8).name, false);
+					impComponent.CancelInvoke ();
 				}
-				impEntity.GetComponent<ImpComponent>().sprite.GetComponent<SpriteRenderer> ().flipX = false;
+				impComponent.sprite.GetComponent<SpriteRenderer> ().flipX = false;
 			}
 		}
 	}

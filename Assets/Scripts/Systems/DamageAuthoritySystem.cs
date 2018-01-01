@@ -12,11 +12,7 @@ public class DamageAuthoritySystem : EventSystem {
 		instance = this;
 	}
 
-	public static void send (TakeDamageEvent incomingEvent, float damage) {
-		incomingEvent.Invoke (damage);
-	}
-
-	public static void send (DoDamageEvent incomingEvent, float damage) {
+	public static void send (AbstractFloatEvent incomingEvent, float damage) {
 		incomingEvent.Invoke (damage);
 	}
 }

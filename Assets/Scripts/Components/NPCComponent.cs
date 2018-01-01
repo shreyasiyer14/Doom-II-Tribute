@@ -10,6 +10,4 @@ abstract public class NPCComponent : Component {
 									Direction.ForwardLeft, Direction.ForwardRight, Direction.BackwardLeft, Direction.BackwardRight};
 	[HideInInspector]
 	public enum Direction : int {Forward, Back, Left, Right, ForwardLeft, ForwardRight, BackwardLeft, BackwardRight, Default};
-	[HideInInspector]
-	public Transform entityTransform = null;
 }
