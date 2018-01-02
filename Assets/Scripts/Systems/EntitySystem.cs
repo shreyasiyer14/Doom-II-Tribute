@@ -15,4 +15,8 @@ public class EntitySystem : EventSystem {
 	public static void send (AbstractEntityEvent incomingEvent) {
 		incomingEvent.Invoke (incomingEvent.entity);
 	}
+
+	public static void send (AbstractFloatEvent incomingEvent, float damage) {
+		incomingEvent.Invoke (damage);
+	}
 }

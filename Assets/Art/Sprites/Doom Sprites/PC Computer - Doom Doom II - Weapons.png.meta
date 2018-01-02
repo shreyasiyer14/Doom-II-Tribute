@@ -1,14 +1,81 @@
 fileFormatVersion: 2
 guid: b12bdcf754d5f43e3a8a5f259cc182f9
-timeCreated: 1514420014
+timeCreated: 1514802163
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: PC Computer - Doom Doom II - Weapons_0
+    21300002: PC Computer - Doom Doom II - Weapons_1
+    21300004: PC Computer - Doom Doom II - Weapons_2
+    21300006: PC Computer - Doom Doom II - Weapons_3
+    21300008: PC Computer - Doom Doom II - Weapons_4
+    21300010: PC Computer - Doom Doom II - Weapons_5
+    21300012: PC Computer - Doom Doom II - Weapons_6
+    21300014: PC Computer - Doom Doom II - Weapons_7
+    21300016: PC Computer - Doom Doom II - Weapons_8
+    21300018: PC Computer - Doom Doom II - Weapons_9
+    21300020: PC Computer - Doom Doom II - Weapons_10
+    21300022: PC Computer - Doom Doom II - Weapons_11
+    21300024: PC Computer - Doom Doom II - Weapons_12
+    21300026: PC Computer - Doom Doom II - Weapons_13
+    21300028: PC Computer - Doom Doom II - Weapons_14
+    21300030: PC Computer - Doom Doom II - Weapons_15
+    21300032: PC Computer - Doom Doom II - Weapons_16
+    21300034: PC Computer - Doom Doom II - Weapons_17
+    21300036: PC Computer - Doom Doom II - Weapons_18
+    21300038: PC Computer - Doom Doom II - Weapons_19
+    21300040: PC Computer - Doom Doom II - Weapons_20
+    21300042: PC Computer - Doom Doom II - Weapons_21
+    21300044: PC Computer - Doom Doom II - Weapons_22
+    21300046: PC Computer - Doom Doom II - Weapons_23
+    21300048: PC Computer - Doom Doom II - Weapons_24
+    21300050: PC Computer - Doom Doom II - Weapons_25
+    21300052: PC Computer - Doom Doom II - Weapons_26
+    21300054: PC Computer - Doom Doom II - Weapons_27
+    21300056: PC Computer - Doom Doom II - Weapons_28
+    21300058: PC Computer - Doom Doom II - Weapons_29
+    21300060: PC Computer - Doom Doom II - Weapons_30
+    21300062: PC Computer - Doom Doom II - Weapons_31
+    21300064: PC Computer - Doom Doom II - Weapons_32
+    21300066: PC Computer - Doom Doom II - Weapons_33
+    21300068: PC Computer - Doom Doom II - Weapons_34
+    21300070: PC Computer - Doom Doom II - Weapons_35
+    21300072: PC Computer - Doom Doom II - Weapons_36
+    21300074: PC Computer - Doom Doom II - Weapons_37
+    21300076: PC Computer - Doom Doom II - Weapons_38
+    21300078: PC Computer - Doom Doom II - Weapons_39
+    21300080: PC Computer - Doom Doom II - Weapons_40
+    21300082: PC Computer - Doom Doom II - Weapons_41
+    21300084: PC Computer - Doom Doom II - Weapons_42
+    21300086: PC Computer - Doom Doom II - Weapons_43
+    21300088: PC Computer - Doom Doom II - Weapons_44
+    21300090: PC Computer - Doom Doom II - Weapons_45
+    21300092: PC Computer - Doom Doom II - Weapons_46
+    21300094: PC Computer - Doom Doom II - Weapons_47
+    21300096: PC Computer - Doom Doom II - Weapons_48
+    21300098: PC Computer - Doom Doom II - Weapons_49
+    21300100: PC Computer - Doom Doom II - Weapons_50
+    21300102: PC Computer - Doom Doom II - Weapons_51
+    21300104: PC Computer - Doom Doom II - Weapons_52
+    21300106: PC Computer - Doom Doom II - Weapons_53
+    21300108: PC Computer - Doom Doom II - Weapons_54
+    21300110: PC Computer - Doom Doom II - Weapons_55
+    21300112: PC Computer - Doom Doom II - Weapons_56
+    21300114: PC Computer - Doom Doom II - Weapons_57
+    21300116: PC Computer - Doom Doom II - Weapons_58
+    21300118: PC Computer - Doom Doom II - Weapons_59
+    21300120: PC Computer - Doom Doom II - Weapons_60
+    21300122: PC Computer - Doom Doom II - Weapons_61
+    21300124: PC Computer - Doom Doom II - Weapons_62
+    21300126: PC Computer - Doom Doom II - Weapons_63
+    21300128: PC Computer - Doom Doom II - Weapons_64
+    21300130: PC Computer - Doom Doom II - Weapons_65
+    21300132: PC Computer - Doom Doom II - Weapons_66
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +101,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,9 +115,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -65,9 +132,974 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_0
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 351
+        width: 153
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_1
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 351
+        width: 154
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_2
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 437
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_3
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 437
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_4
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 351
+        width: 78
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 351
+        width: 147
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_6
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 409
+        width: 62
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_7
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 351
+        width: 57
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_8
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 351
+        width: 79
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_9
+      rect:
+        serializedVersion: 2
+        x: 1228
+        y: 351
+        width: 66
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 351
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 351
+        width: 41
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_12
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 351
+        width: 81
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_13
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 351
+        width: 80
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_14
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 351
+        width: 107
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 351
+        width: 140
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_16
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 351
+        width: 140
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_17
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 304
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_18
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 304
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_19
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 180
+        width: 87
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_20
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 180
+        width: 113
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_21
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 287
+        width: 55
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_22
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 287
+        width: 65
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_23
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 181
+        width: 121
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_24
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 243
+        width: 63
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_25
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 180
+        width: 119
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_26
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 238
+        width: 54
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_27
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 181
+        width: 83
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_28
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 181
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_29
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 181
+        width: 201
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_30
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 181
+        width: 81
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_31
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 181
+        width: 77
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_32
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 180
+        width: 79
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_33
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 180
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_34
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 181
+        width: 88
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_35
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 172
+        width: 26
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_36
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 152
+        width: 54
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_37
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 150
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_38
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 165
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_39
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 155
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_40
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 103
+        width: 139
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_41
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 98
+        width: 88
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_42
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 133
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_43
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 153
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_44
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 102
+        width: 86
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_45
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 102
+        width: 85
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_46
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 98
+        width: 73
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_47
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 98
+        width: 94
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_48
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 142
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_49
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 103
+        width: 82
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_50
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 98
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_51
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 113
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_52
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 98
+        width: 12
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_53
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 16
+        width: 104
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_54
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 103
+        width: 61
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_55
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_56
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 16
+        width: 114
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_57
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 16
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_58
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 16
+        width: 102
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_59
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 76
+        width: 62
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_60
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 80
+        width: 54
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_61
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 16
+        width: 83
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_62
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 16
+        width: 85
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_63
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 16
+        width: 170
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_64
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 16
+        width: 170
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_65
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 16
+        width: 156
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PC Computer - Doom Doom II - Weapons_66
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 16
+        width: 83
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
