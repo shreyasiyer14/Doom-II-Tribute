@@ -6,11 +6,11 @@ using System;
 public class ImpSystem : NPCSystem {
 	private Transform player;
 
-	void Start () {
+	protected override void Start () {
 		player = Camera.main.transform;
 	}
 	// Update is called once per frame
-	void Update () {
+	protected override void Update () {
 		foreach (GameObject impEntity in EntityManager.getObjectsOfType<ImpComponent>()) {
 			ImpComponent impComponent = impEntity.GetComponent<ImpComponent> ();
 

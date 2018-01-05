@@ -8,6 +8,6 @@ abstract public class Component : MonoBehaviour {
 	public GameObject entity;
 
 	void OnDestroy () {
-		EntitySystem.send (new RemoveEntityEvent(entity));
+		GeneralEventSystem.send (new RemoveEntityEvent(entity));
 	}
 }

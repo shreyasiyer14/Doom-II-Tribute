@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d2f5e9ca1ed9c24099d3b2f73aa0751, type: 3}
+  m_Name: Chainsaw
+  m_EditorClassIdentifier: 
+  name: Chainsaw
+  damage: 45
+  fireAnimation: {fileID: 7400000, guid: 16cd32dff6a0b4a4db3f68488956fe8a, type: 2}
+  droppedSprite: {fileID: 21300012, guid: b12bdcf754d5f43e3a8a5f259cc182f9, type: 3}
+  isSingleShot: 0

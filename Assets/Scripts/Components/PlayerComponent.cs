@@ -65,5 +65,11 @@ public class PlayerComponent : Component {
 			weaponTransform.localPosition = new Vector3 (Mathf.Lerp(weaponTransform.localPosition.x, 0.0f, 0.5f), Mathf.Lerp(weaponTransform.localPosition.y, -0.85f, 0.5f), weaponTransform.localPosition.z);
 		}
 		#endregion
+
+		#region User-Mouse click events : For shooting/firing the weapon.
+		if (Input.GetMouseButton (0)) {
+		//	GeneralEventSystem.send (new WeaponFireEvent());
+		}
+		#endregion
 	}
 }

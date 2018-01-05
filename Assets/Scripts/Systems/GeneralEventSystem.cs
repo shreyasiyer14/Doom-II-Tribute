@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntitySystem : EventSystem {
-	public static EntitySystem instance;
+public class GeneralEventSystem : EventSystem {
+	public static GeneralEventSystem instance;
 
 	void Awake () {
 		if (instance != null) {

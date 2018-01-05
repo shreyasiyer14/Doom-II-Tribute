@@ -38,7 +38,7 @@ public class ProjectileSystem : MonoBehaviour, EventSystem {
 			GameObject playerParentObject = player.parent.gameObject;
 			ProjectileComponent projectileComp = projectile.GetComponent<ProjectileComponent> ();
 
-			EntitySystem.send (new DoDamageEvent(projectile, playerParentObject, playerParentObject.GetComponent<HealthComponent>()), projectileComp.damage);	
+			GeneralEventSystem.send (new DoDamageEvent(projectile, playerParentObject, playerParentObject.GetComponent<HealthComponent>()), projectileComp.damage);	
 
 			Destroy (projectile, 0.5f);
 		}
