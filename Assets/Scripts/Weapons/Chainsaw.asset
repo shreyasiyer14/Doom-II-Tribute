@@ -14,5 +14,7 @@ MonoBehaviour:
   name: Chainsaw
   damage: 45
   fireAnimation: {fileID: 7400000, guid: 16cd32dff6a0b4a4db3f68488956fe8a, type: 2}
+  fireAdditionalSprite: {fileID: 0}
+  mainSprite: {fileID: 21300000, guid: b12bdcf754d5f43e3a8a5f259cc182f9, type: 3}
   droppedSprite: {fileID: 21300012, guid: b12bdcf754d5f43e3a8a5f259cc182f9, type: 3}
   isSingleShot: 0
