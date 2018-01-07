@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponFireEvent : AbstractEntityEvent {
+public class WeaponFireEvent : AbstractIntEvent {
 	public WeaponComponent weaponComp;
 
-	public WeaponFireEvent (GameObject entity, WeaponComponent weaponComp) {
-		this.entity = entity;
+	public WeaponFireEvent (WeaponComponent weaponComp) {
 		this.weaponComp = weaponComp;
 
 		this.AddListener (weaponComp.onFireEvent);

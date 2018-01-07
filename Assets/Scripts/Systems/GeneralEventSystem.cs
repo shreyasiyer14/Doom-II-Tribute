@@ -19,4 +19,8 @@ public class GeneralEventSystem : EventSystem {
 	public static void send (AbstractFloatEvent incomingEvent, float damage) {
 		incomingEvent.Invoke (damage);
 	}
+
+	public static void send (AbstractIntEvent incomingEvent, int slot) {
+		incomingEvent.Invoke (slot);
+	}
 }

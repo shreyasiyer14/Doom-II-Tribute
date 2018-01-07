@@ -15,11 +15,13 @@ public class PlayerComponent : Component {
 	private GameObject playerCamera;
 	private Transform weaponTransform;
 	private float mousePosX = 0.0f;
+	private WeaponComponent weaponComp;
 
 	void Start () {
 		playerCamera = transform.GetChild (0).gameObject;
 		playerCamera.transform.position += new Vector3 (0f, eyeHeight,0f);
 		weaponTransform = playerCamera.transform.GetChild (0);
+		weaponComp = transform.GetChild(0).GetChild(0).gameObject.GetComponent<WeaponComponent>();
 	}
 	
 	void Update () {
@@ -68,8 +70,8 @@ public class PlayerComponent : Component {
 
 		#region User-Mouse click events : For shooting/firing the weapon.
 		if (Input.GetMouseButton (0)) {
-		//	GeneralEventSystem.send (new WeaponFireEvent());
-		}
+			GeneralEventSystem.send (new WeaponFireEvent(weaponComp), 1);
+		} 
 		#endregion
 	}
 }

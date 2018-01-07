@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapon : ScriptableObject {
 	public string name;
 	public float damage;
-	public Motion fireAnimation;
+	public AnimationClip fireAnimation;
 	public Sprite fireAdditionalSprite;
 	public Sprite mainSprite;
 	public Sprite droppedSprite;

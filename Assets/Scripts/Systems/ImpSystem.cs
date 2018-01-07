@@ -9,7 +9,7 @@ public class ImpSystem : NPCSystem {
 	protected override void Start () {
 		player = Camera.main.transform;
 	}
-	// Update is called once per frame
+
 	protected override void Update () {
 		foreach (GameObject impEntity in EntityManager.getObjectsOfType<ImpComponent>()) {
 			ImpComponent impComponent = impEntity.GetComponent<ImpComponent> ();
