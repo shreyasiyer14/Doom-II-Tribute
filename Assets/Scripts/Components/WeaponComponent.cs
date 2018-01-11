@@ -6,12 +6,10 @@ public class WeaponComponent : MonoBehaviour {
 	public Weapon currentWeapon;
 
 	private Animator anim;
-	private Sprite weaponSprite;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
 		GetComponent<SpriteRenderer> ().sprite = currentWeapon.mainSprite;
-		weaponSprite = currentWeapon.mainSprite;
 	}
 
 	public void onFireEvent (int isFiring) {
@@ -23,6 +21,6 @@ public class WeaponComponent : MonoBehaviour {
 
 	public void onWeaponChangeEvent (int slotChange) {
 		currentWeapon = InventoryManager.playerInventory [slotChange];
-		weaponSprite = currentWeapon.mainSprite;
+		GetComponent<SpriteRenderer> ().sprite = currentWeapon.mainSprite;
 	}
 }
