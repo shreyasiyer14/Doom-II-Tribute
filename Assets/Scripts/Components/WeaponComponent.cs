@@ -9,14 +9,19 @@ public class WeaponComponent : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator> ();
+		anim.enabled = false;
 		GetComponent<SpriteRenderer> ().sprite = currentWeapon.mainSprite;
 	}
 
 	public void onFireEvent (int isFiring) {
-		if (isFiring == 1)
+		if (isFiring == 1) {
+			anim.enabled = true;
 			anim.SetTrigger (currentWeapon.fireAnimation.name);
-		else
-			anim.ResetTrigger (currentWeapon.fireAnimation.name);
+		} else {
+			if (anim.enabled)
+				anim.enabled = false;
+		}
+		GetComponent<SpriteRenderer> ().sprite = currentWeapon.mainSprite;
 	}
 
 	public void onWeaponChangeEvent (int slotChange) {

@@ -71,7 +71,9 @@ public class PlayerComponent : Component {
 		#region User-Mouse click events : For shooting/firing the weapon.
 		if (Input.GetMouseButton (0)) {
 			GeneralEventSystem.send (new WeaponFireEvent(weaponComp), 1);
-		} 
+		} else {
+			GeneralEventSystem.send (new WeaponFireEvent(weaponComp), 0);
+		}
 		#endregion
 	}
 }
