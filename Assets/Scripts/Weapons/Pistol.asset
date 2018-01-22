@@ -14,7 +14,8 @@ MonoBehaviour:
   name: Pistol
   damage: 15
   fireAnimation: {fileID: 7400000, guid: f528c6b22d2a60b489f6c825040eaf67, type: 2}
-  fireAdditionalAnimation: {fileID: 0}
+  fireAdditionalAnimation: {fileID: 7400000, guid: f528c6b22d2a60b489f6c825040eaf67,
+    type: 2}
   mainSprite: {fileID: 21300014, guid: b12bdcf754d5f43e3a8a5f259cc182f9, type: 3}
   droppedSprite: {fileID: 21300006, guid: b12bdcf754d5f43e3a8a5f259cc182f9, type: 3}
   isSingleShot: 0
