@@ -14,8 +14,9 @@ public class PlayerComponent : Component {
 
 	private GameObject playerCamera;
 	private Transform weaponTransform;
-	private float mousePosX = 0.0f;
+	private float mousePosX = 0f;
 	private WeaponComponent weaponComp;
+	private float timeSinceInputKeyHeld = 0f;
 
 	void Start () {
 		playerCamera = transform.GetChild (0).gameObject;
@@ -25,6 +26,9 @@ public class PlayerComponent : Component {
 	}
 	
 	void Update () {
+		/**
+			TODO: Add InputEvent which sends a signal for the corresponding input event.
+		 */
 		#region User-Mouse/Keyboard handling : For player/character's rotation.
 		if (Input.GetAxis("Horizontal") != 0.0f) {
 			mousePosX += Input.GetAxis("Horizontal");
@@ -39,30 +43,32 @@ public class PlayerComponent : Component {
 
 		#region User-Keyboard handling : For player/character's translatory movement.
 		if (Input.GetKey (KeyCode.W)) {
+			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (Vector3.forward * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(Time.time * horizontalBob/2f), -0.875f + 0.15f * Mathf.Cos(Time.time * horizontalBob), weaponTransform.localPosition.z);
-		}
-
-		if (Input.GetKey (KeyCode.S)) {
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
+		} else if (Input.GetKey (KeyCode.S)) {
+			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (-Vector3.forward * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(Time.time * horizontalBob/2f), -0.875f + 0.15f * Mathf.Cos(Time.time * horizontalBob), weaponTransform.localPosition.z);
-		}
-
-		if (Input.GetKey (KeyCode.D)) {
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
+		} else if (Input.GetKey (KeyCode.D)) {
+			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (Vector3.right * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(Time.time * horizontalBob/2f), -0.875f + 0.15f * Mathf.Cos(Time.time * horizontalBob), weaponTransform.localPosition.z);
-		}
-
-		if (Input.GetKey (KeyCode.A)) {
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
+		} else if (Input.GetKey (KeyCode.A)) {
+			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (-Vector3.right * stepSize * Time.fixedDeltaTime);
-			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(Time.time * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(Time.time * horizontalBob/2f), -0.875f + 0.15f * Mathf.Cos(Time.time * horizontalBob), weaponTransform.localPosition.z);
+			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
 		}
 
+		/**
+		 * To return back to the default weapon position.
+		 */
 		if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) {
+			timeSinceInputKeyHeld = 0f;
 			transform.position = new Vector3(transform.position.x, Mathf.Lerp (transform.position.y, eyeHeight, 0.5f), transform.position.z);
 			weaponTransform.localPosition = new Vector3 (Mathf.Lerp(weaponTransform.localPosition.x, 0.0f, 0.5f), Mathf.Lerp(weaponTransform.localPosition.y, -0.85f, 0.5f), weaponTransform.localPosition.z);
 		}
