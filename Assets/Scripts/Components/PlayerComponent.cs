@@ -51,7 +51,7 @@ public class PlayerComponent : Component {
 			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (-Vector3.forward * stepSize * Time.fixedDeltaTime);
 			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(-timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
 		} else if (Input.GetKey (KeyCode.D)) {
 			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (Vector3.right * stepSize * Time.fixedDeltaTime);
@@ -61,7 +61,7 @@ public class PlayerComponent : Component {
 			timeSinceInputKeyHeld += Time.fixedDeltaTime;
 			transform.Translate (-Vector3.right * stepSize * Time.fixedDeltaTime);
 			transform.position = new Vector3 (transform.position.x, eyeHeight + 0.5f * Mathf.Sin(timeSinceInputKeyHeld * verticalBob), transform.position.z);
-			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
+			weaponTransform.localPosition = new Vector3 (0.0f + 0.3f * Mathf.Sin(-timeSinceInputKeyHeld * horizontalBob/2f), -0.875f - 0.05f * Mathf.Cos(timeSinceInputKeyHeld * horizontalBob), weaponTransform.localPosition.z);
 		}
 
 		/**
