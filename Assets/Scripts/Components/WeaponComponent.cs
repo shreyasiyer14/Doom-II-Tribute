@@ -31,7 +31,7 @@ public class WeaponComponent : MonoBehaviour {
 	public void onWeaponChangeEvent (int slotChange) {
 		currentWeapon = InventoryManager.playerInventory [slotChange];
 		WeaponIndex[] weaponIndices = (WeaponIndex[]) System.Enum.GetValues(currentWeaponIndex.GetType());
-		currentWeaponIndex = weaponIndices[slotChange];
+		currentWeaponIndex = (WeaponIndex) System.Enum.Parse(typeof(WeaponIndex), currentWeapon.name.ToUpper(), true);
 		GetComponent<SpriteRenderer> ().sprite = currentWeapon.mainSprite;
 	}
 }
